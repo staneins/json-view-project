@@ -1,0 +1,27 @@
+app:
+  host-url: http://localhost:8080
+
+spring:
+  init:
+    mode: never
+  jpa:
+    show-sql: true
+
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/view
+    username: postgres
+    password: mysecretpassword
+
+  sql:
+    init:
+      mode: always
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
